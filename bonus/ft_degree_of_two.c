@@ -12,15 +12,13 @@
 
 #include "printf.h"
 
-unsigned long	ft_degree_of_two(int exp)
-{
-	unsigned long	res;
+unsigned long ft_degree_of_two(int exp) {
+  unsigned long res;
 
-	res = 1;
-	if (exp < 0)
-		res = 0;
-	else
-		while (exp-- > 0)
-			res *= 2;
-	return (res);
+  res = 1;
+  if (exp < 0)
+    res = 0;
+  else
+    while (exp-- > 0) res *= 2;
+  return (res);
 }

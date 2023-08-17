@@ -12,17 +12,16 @@
 
 #include "printf.h"
 
-char	*ft_handle_n(t_fws *fws, const char *fmt, va_list *ap)
-{
-	if (fws->size == HH_SIZE)
-		*(va_arg(*ap, char *)) = (char) buf_count();
-	else if (fws->size == H_SIZE)
-		*(va_arg(*ap, short *)) = (short) buf_count();
-	else if (fws->size == L_SIZE)
-		*(va_arg(*ap, long *)) = (long) buf_count();
-	else if (fws->size == LL_SIZE)
-		*(va_arg(*ap, long long *)) = (long long) buf_count();
-	else
-		*(va_arg(*ap, int *)) = buf_count();
-	return ((char *) fmt);
+char *ft_handle_n(t_fws *fws, const char *fmt, va_list *ap) {
+  if (fws->size == HH_SIZE)
+    *(va_arg(*ap, char *)) = (char)buf_count();
+  else if (fws->size == H_SIZE)
+    *(va_arg(*ap, short *)) = (short)buf_count();
+  else if (fws->size == L_SIZE)
+    *(va_arg(*ap, long *)) = (long)buf_count();
+  else if (fws->size == LL_SIZE)
+    *(va_arg(*ap, long long *)) = (long long)buf_count();
+  else
+    *(va_arg(*ap, int *)) = buf_count();
+  return ((char *)fmt);
 }

@@ -12,12 +12,10 @@
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
-{
-	size_t	size;
+void ft_putstr_fd(char *s, int fd) {
+  size_t size;
 
-	size = ft_strlen(s);
-	if (size)
-		write(fd, s, size);
-	return ;
+  size = ft_strlen(s);
+  if (size) write(fd, s, size);
+  return;
 }

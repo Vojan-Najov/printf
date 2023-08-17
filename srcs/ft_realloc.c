@@ -12,13 +12,11 @@
 
 #include "printf.h"
 
-void	*ft_realloc(void *mptr, size_t size, size_t memsize)
-{
-	void	*ret;
+void *ft_realloc(void *mptr, size_t size, size_t memsize) {
+  void *ret;
 
-	ret = malloc(size);
-	if (ret)
-		ft_memcpy(ret, mptr, memsize);
-	free(mptr);
-	return (ret);
+  ret = malloc(size);
+  if (ret) ft_memcpy(ret, mptr, memsize);
+  free(mptr);
+  return (ret);
 }

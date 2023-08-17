@@ -12,10 +12,9 @@
 
 #include "libft.h"
 
-int	ft_isprint(int c)
-{
-	if (040 <= c && c <= 0176)
-		return (c);
-	else
-		return (0);
+int ft_isprint(int c) {
+  if (040 <= c && c <= 0176)
+    return (c);
+  else
+    return (0);
 }

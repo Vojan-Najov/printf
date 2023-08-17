@@ -12,10 +12,9 @@
 
 #include "printf.h"
 
-int	ft_max(int a, int b)
-{
-	if (b > a)
-		return (b);
-	else
-		return (a);
+int ft_max(int a, int b) {
+  if (b > a)
+    return (b);
+  else
+    return (a);
 }

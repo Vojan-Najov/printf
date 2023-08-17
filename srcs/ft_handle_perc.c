@@ -12,28 +12,19 @@
 
 #include "printf.h"
 
-char	*ft_handle_perc(t_fws *fws, const char *fmt)
-{
-	int	k;
+char *ft_handle_perc(t_fws *fws, const char *fmt) {
+  int k;
 
-	k = fws->width - 1;
-	if (fws->dash)
-	{
-		buf_add("%", 1);
-		while (k-- > 0)
-			buf_add(" ", 1);
-	}
-	else if (fws->zero)
-	{
-		while (k-- > 0)
-			buf_add("0", 1);
-		buf_add("%", 1);
-	}
-	else
-	{
-		while (k-- > 0)
-			buf_add(" ", 1);
-		buf_add("%", 1);
-	}
-	return ((char *) fmt);
+  k = fws->width - 1;
+  if (fws->dash) {
+    buf_add("%", 1);
+    while (k-- > 0) buf_add(" ", 1);
+  } else if (fws->zero) {
+    while (k-- > 0) buf_add("0", 1);
+    buf_add("%", 1);
+  } else {
+    while (k-- > 0) buf_add(" ", 1);
+    buf_add("%", 1);
+  }
+  return ((char *)fmt);
 }

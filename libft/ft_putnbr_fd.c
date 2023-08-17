@@ -12,29 +12,23 @@
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
-{
-	char	buf[N];
-	int		i;
-	int		sign;
-	int		rem;
+void ft_putnbr_fd(int n, int fd) {
+  char buf[N];
+  int i;
+  int sign;
+  int rem;
 
-	i = N;
-	sign = 0;
-	if (!n)
-		buf[--i] = '0';
-	if (n < 0)
-		sign = 1;
-	while (n)
-	{
-		rem = n % 10;
-		if (rem < 0)
-			rem = -rem;
-		buf[--i] = '0' + rem;
-		n /= 10;
-	}
-	if (sign)
-		buf[--i] = '-';
-	write(fd, buf + i, N - i);
-	return ;
+  i = N;
+  sign = 0;
+  if (!n) buf[--i] = '0';
+  if (n < 0) sign = 1;
+  while (n) {
+    rem = n % 10;
+    if (rem < 0) rem = -rem;
+    buf[--i] = '0' + rem;
+    n /= 10;
+  }
+  if (sign) buf[--i] = '-';
+  write(fd, buf + i, N - i);
+  return;
 }

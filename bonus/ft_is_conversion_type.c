@@ -12,9 +12,8 @@
 
 #include "printf.h"
 
-int	ft_is_conversion_type(char c)
-{
-	return ((c == 'c') || (c == 's') || (c == 'p') || (c == 'd') || \
-			(c == 'i') || (c == 'u') || (c == 'x') || (c == 'X') || \
-			(c == 'o') || (c == '%') || (c == 'n') || (c == 'f'));
+int ft_is_conversion_type(char c) {
+  return ((c == 'c') || (c == 's') || (c == 'p') || (c == 'd') || (c == 'i') ||
+          (c == 'u') || (c == 'x') || (c == 'X') || (c == 'o') || (c == '%') ||
+          (c == 'n') || (c == 'f'));
 }
